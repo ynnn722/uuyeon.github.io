@@ -1,5 +1,9 @@
-tag1:
-  name: tag1
+cert:
+  name: cert
+
+ai-103:
+  name: AI-103
+  parent: cert
 
 tag2:
   name: tag2
