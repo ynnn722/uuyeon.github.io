@@ -191,10 +191,11 @@ ul.topbar {
 	width: 98.5%;
 	min-height: 600px;
 	max-height: 600px;
-	padding: 2px;
+	padding: 10px;
 	margin: 0 auto;
 	overflow-y: scroll;
 	overflow-x: scroll;
+	box-sizing: border-box;
 
 	p {
 		line-height: 150%;
@@ -216,6 +217,22 @@ ul.topbar {
 		font-size: 18px;
 		font-weight: 700;
 		margin: 25px 0 5px 0;
+	}
+
+	h3 {
+		font-size: 16px;
+		font-weight: 700;
+		margin: 20px 0 5px 0;
+	}
+
+	h4 {
+		font-size: 14px;
+		font-weight: 700;
+		margin: 18px 0 8px 0;
+
+		+ p {
+			margin-top: 0;
+		}
 	}
 
 	em {
