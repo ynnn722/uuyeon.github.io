@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 	<link rel="stylesheet" href="/assets/css/atom-one-light.css">
     
-        <title>AI-103 study note</title>
+        <title>01. Planning and managing Azure AI solutions</title>
 		<link rel="stylesheet" type="text/css" href="/assets/css/002.css">
     
 	<link rel="stylesheet" href="/assets/css/font-awesome.min.css">
@@ -20,7 +20,9 @@
 		<div class="default_title">
 			<img src="/assets/img/mycomputer.png" />
 			
-				<h1>Dev.Yeon</h1>
+				
+				
+				<h1>AI 103</h1>
 			
 		</div>
 		<ul class="topbar">
@@ -173,13 +175,16 @@
 		</div>
 		<div class="post_list">
 			
-				<ul>
-					
-					<li><a href="/20260517/memo" title="memo"><img src="/assets/img/file.ico" title="memo" />memo</a></li>
-					
-					<li><a href="/20260517/ai-103-study-log" title="AI-103 study note"><img src="/assets/img/file.ico" title="AI-103 study note" />AI-103 study note</a></li>
-					
-				</ul>
+			
+				
+<ul>
+	
+	<li><a href="/20260518/ai-103-study-log" title="02. Implementing AI-generated and agentic solutions"><img src="/assets/img/file.ico" title="02. Implementing AI-generated and agentic solutions" />02. Implementing AI-generated and agentic solutions</a></li>
+	
+	<li><a href="/20260517/ai-103-study-log" title="01. Planning and managing Azure AI solutions"><img src="/assets/img/file.ico" title="01. Planning and managing Azure AI solutions" />01. Planning and managing Azure AI solutions</a></li>
+	
+</ul>
+
 			
 		</div>
 		<div class="post_total">
@@ -193,7 +198,7 @@
         <div class="content">
 			<div class="post_title">
 				<img src="/assets/img/file.png" />
-				<h1>AI-103 study note</h1>
+				<h1>01. Planning and managing Azure AI solutions</h1>
 				<a href="/"><div class="btn"><span class="fa fa-times"></span></div></a>
 				<div class="btn btn_max"><span class="fa fa-window-maximize"></span></div>
 				<div class="btn"><span class="fa fa-window-minimize"></span></div>
@@ -229,7 +234,41 @@
 <p>생성 AI, 자연어 처리, 컴퓨터 비전, 음성 인식 기술을 결합하면 문서, 양식, 이미지, 녹음 파일 등 다양한 형태의 콘텐츠에서 핵심 정보를 추출하는 AI 솔루션을 개발할 수 있다. 생성 AI는 언어적 추론을 수행하고, 자연어 기술은 문서의 의미와 구조를 이해하며, 컴퓨터 비전은 이미지나 영상 속 정보를 분석하고, 음성 기술은 음성 데이터를 전사하고 해석한다. 이러한 기술의 결합을 통해 <strong>비정형 데이터에서 필요한 정보를 자동으로 추출</strong>하고 업무를 자동화할 수 있다. 예를 들어 자동 비용 청구 처리 시스템은 스캔한 영수증에서 구매 날짜, 품목별 세부 정보, 총 비용을 자동으로 추출할 수 있다.</p>
 
 <h3 id="microsoft-foundry">Microsoft Foundry</h3>
+<p>Microsoft Foundry는 Microsoft Azure에서 AI 솔루션을 개발하기 위한 플랫폼이다. Azure AI 리소스를 개별적으로 프로비전하여 Foundry 없이도 AI 애플리케이션을 개발할 수 있지만, Microsoft Foundry는 <strong>프로젝트 조직, 리소스 관리, AI 개발 기능을 통합적으로 제공</strong>하므로 단순한 솔루션을 제외한 대부분의 AI 솔루션 개발에 권장된다. <br />
+또한 Microsoft Foundry는 웹 기반 시각적 개발 환경인 Foundry 포털과, 프로그래밍 방식으로 AI 솔루션을 개발할 수 있는 Foundry SDK를 제공한다.</p>
 
+<h4 id="microsoft-foundry-프로젝트">Microsoft Foundry 프로젝트</h4>
+<p>Microsoft Foundry에서는 AI 솔루션을 프로젝트 단위로 관리한다.</p>
+<ul>
+  <li>리소스 연결: AI 모델, 데이터베이스, 스토리지 같은 외부 리소스와의 연결</li>
+  <li>데이터: 모델이 사용할 문서, 파일, 데이터셋</li>
+  <li>코드: AI 앱이나 기능을 구현하는 코드</li>
+  <li>기타 요소: 프롬프트, 평가 설정, 배포 설정 등</li>
+</ul>
+
+<p>각 프로젝트는 Azure에 생성된 하나의 Microsoft Foundry 리소스에 소속되며, 이 Foundry 리소스는 컴퓨팅, 데이터 스토리지, AI 도구 및 기타 서비스를 제공한다. 하나의 Foundry 리소스는 여러 개의 자식 프로젝트를 포함할 수 있고, 이 중 하나는 기본 프로젝트로 지정될 수 있다.</p>
+
+<p>Microsoft Foundry의 프로젝트는 AI 솔루션을 만들 때 필요한 모델, 에이전트, 도구, 지식을 관리하는 작업 공간이다. 개발자는 프로젝트 안에서 LLM을 배포하고, 에이전트를 만들고, 도구와 지식 저장소를 연결해서 생성 AI 앱이나 AI 에이전트를 개발할 수 있다.</p>
+
+<h4 id="모델">모델</h4>
+<p>AI 솔루션의 핵심 기능을 수행하는 대규모 언어 모델, 즉 <strong>LLM</strong>이다. Microsoft Foundry에서는 Foundry <strong>모델 카탈로그</strong>에서 Microsoft OpenAI 및 기타 공급자의 모델을 선택하여 프로젝트에 <strong>배포</strong>할 수 있다. 배포된 모델은 프로젝트 엔드포인트 또는 Azure OpenAI 엔드포인트를 통해 애플리케이션과 연결되어 자연어 이해, 응답 생성, 추론 등의 작업을 수행한다.</p>
+
+<ul>
+  <li>프로젝트 엔드포인트 : Foundry 관련 API나 SDK를 통해 모델에 연결하는 방식</li>
+  <li>Azure OpenAI 엔드포인트 : OpenAI API나 SDK를 통해 Azure OpenAI 모델에 연결하는 방식</li>
+</ul>
+
+<h4 id="에이전트">에이전트</h4>
+<p><strong>LLM, 지침, 도구를 결합하여 작업을 자동화</strong>하고 사용자 또는 다른 에이전트와 협업할 수 있는 <strong>자율 AI 엔터티</strong>이다. Foundry의 에이전트는 Microsoft Foundry 에이전트 서비스를 통해 개발되며, 프로젝트 엔드포인트를 통해 사용된다.</p>
+
+<ul>
+  <li>LLM : 문장을 이해하고 판단하는 두뇌</li>
+  <li>지침 : 어떤 역할을 해야 하는지 알려주는 규칙</li>
+  <li>도구 : 검색, 코드 실행, 파일 처리 같은 실제 작업 수단</li>
+</ul>
+
+<h4 id="도구">도구</h4>
+<p>에이전트가 외부 기능이나 서비스를 활용하여 작업을 수행할 수 있도록 지원하는 요소이다. Microsoft Foundry의 도구에는 <strong>웹 검색, 코드 인터프리터</strong>와 같은 기본 제공 기능이 포함되며, <strong>MCP(모델 컨텍스트 프로토콜)</strong> 연결을 통해 사용자 지정 도구나 타사 도구와도 연동할 수 있다. 또한 텍스트 분석, 음성 인식 및 합성, 번역, 콘텐츠 이해와 같은 AI 서비스도 Foundry 도구에 포함된다.</p>
 
 				
 					<br>

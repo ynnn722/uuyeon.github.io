@@ -25,6 +25,10 @@
 			{% if page.tag %}
 				{% assign tag_meta = site.data.tags[page.tag] %}
 				<h1>{{ tag_meta.name | default: page.tag | replace: '-', ' ' }}</h1>
+			{% elsif page.date and page.tags.size > 0 %}
+				{% assign current_tag = page.tags | first %}
+				{% assign tag_meta = site.data.tags[current_tag] %}
+				<h1>{{ tag_meta.name | default: current_tag | replace: '-', ' ' }}</h1>
 			{% else %}
 				<h1>{{ site.name }}</h1>
 			{% endif %}
@@ -58,27 +62,27 @@
 			</ul>
 		</div>
 		<div class="post_list">
+			{% if page.tag %}
+				{% assign list_posts = site.tags[page.tag] %}
+			{% elsif page.date and page.tags.size > 0 %}
+				{% assign current_tag = page.tags | first %}
+				{% assign list_posts = site.tags[current_tag] %}
+			{% else %}
+				{% assign list_posts = site.posts %}
+			{% endif %}
 			{% unless page.date%}
 				{% if page.title == 'me' or page.title == '404...' %}
-					<ul>
-						{% for post in site.posts %}
-						<li><a href="{{ post.url | relative_url }}" title="{{ post.title }}"><img src="{{ '/assets/img/file.ico' | relative_url }}" title="{{ post.title }}" />{{ post.title }}</a></li>
-						{% endfor %}
-					</ul>
+					{% include sorted_post_list.html posts=list_posts %}
 				{% else %}
 					{{ content }}
 				{% endif %}
 			{% else %}
-				<ul>
-					{% for post in site.posts %}
-					<li><a href="{{ post.url | relative_url }}" title="{{ post.title }}"><img src="{{ '/assets/img/file.ico' | relative_url }}" title="{{ post.title }}" />{{ post.title }}</a></li>
-					{% endfor %}
-				</ul>
+				{% include sorted_post_list.html posts=list_posts %}
 			{% endunless %}
 		</div>
 		<div class="post_total">
-			{% if page.tag %}
-				<div class="left">{{ site.tags[page.tag] | size }} object(s)</div>
+			{% if page.tag or page.date and page.tags.size > 0 %}
+				<div class="left">{{ list_posts | size }} object(s)</div>
 			{% else %}
 				<div class="left">{{ site.posts | size }} object(s)</div>
 			{% endif %}

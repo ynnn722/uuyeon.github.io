@@ -9,7 +9,6 @@ layout: default
 		<li><a href="{{ '/tag/' | append: child_id | append: '/' | relative_url }}" title="{{ child.name | default: child_id }}"><img src="{{ '/assets/img/folder.ico' | relative_url }}" />{{ child.name | default: child_id }}</a></li>
 		{% endif %}
 	{% endfor %}
-	{% for post in site.tags[page.tag] %}
-		<li><a href="{{ post.url | relative_url }}" title="{{ post.title }}"><img src="{{ '/assets/img/file.ico' | relative_url }}" title="{{ post.title }}" />{{ post.title }}</a></li>
-	{% endfor %}
+	{% assign tag_posts = site.tags[page.tag] %}
+	{% include sorted_post_list.html posts=tag_posts wrap='false' %}
 </ul>
