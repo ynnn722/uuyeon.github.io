@@ -1,4 +1,5 @@
 ---
 layout: default
 ---
-{% include sorted_post_list.html posts=site.posts %}
+{% assign home_posts = site.tags['ai-103'] %}
+{% include sorted_post_list.html posts=home_posts %}

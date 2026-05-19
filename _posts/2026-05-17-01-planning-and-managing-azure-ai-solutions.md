@@ -2,6 +2,7 @@
 layout: default
 title: "01. Planning and managing Azure AI solutions"
 tags: ai-103
+permalink: /ai-103/01-planning-and-managing-azure-ai-solutions.html
 ---
 
 # Microsoft AI-103(AI-102) study note

@@ -1,3 +1,4 @@
+# 기본 permalink (ai-103·기타 포스트는 _plugins/post_permalink.rb에서 덮어씀)
 permalink: /:year:month:day/:title
 url: https://ynnn722.github.io
 baseurl: /uuyeon.github.io

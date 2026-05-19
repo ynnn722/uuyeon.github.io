@@ -84,7 +84,8 @@
 			{% if page.tag or page.date and page.tags.size > 0 %}
 				<div class="left">{{ list_posts | size }} object(s)</div>
 			{% else %}
-				<div class="left">{{ site.posts | size }} object(s)</div>
+				{% assign home_posts = site.tags['ai-103'] %}
+				<div class="left">{{ home_posts | size }} object(s)</div>
 			{% endif %}
 			<div class="right">&nbsp;</div>
 		</div>
