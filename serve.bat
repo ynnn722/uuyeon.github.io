@@ -31,7 +31,7 @@ if errorlevel 1 (
 )
 
 echo Cleaning old build...
-jekyll clean
+call jekyll clean
 if errorlevel 1 (
   echo [WARN] jekyll clean 실패 — 계속 진행합니다.
 )
@@ -40,7 +40,7 @@ echo.
 echo Starting local server at http://127.0.0.1:4000/
 echo Press Ctrl+C to stop.
 echo.
-jekyll serve --config _config.yml,_config_development.yml --livereload
+call jekyll serve --config _config.yml,_config_development.yml --livereload
 if errorlevel 1 (
   echo.
   echo [ERROR] jekyll serve 실패. 위 오류 메시지를 확인하세요.

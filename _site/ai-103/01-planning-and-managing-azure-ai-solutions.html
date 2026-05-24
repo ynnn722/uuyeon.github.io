@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<link rel="stylesheet" href="/assets/css/atom-one-light.css">
+    
+        <title>01. Planning and managing Azure AI solutions</title>
+		<link rel="stylesheet" type="text/css" href="/assets/css/002.css">
+    
+	<link rel="stylesheet" href="/assets/css/font-awesome.min.css">
+	<link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
+	<script src="/assets/js/highlight.pack.js"></script>
+	<script>hljs.initHighlightingOnLoad();</script>
+</head>
+<body>
+	<div class="wrapper">
+		<div class="default_title">
+			<img src="/assets/img/mycomputer.png" />
+			
+				
+				
+				<h1>AI 103</h1>
+			
+		</div>
+		<ul class="topbar">
+	<a href="/me"><li><u>A</u>bout</li></a>
+	<a href="http://twitter.com/h01000110" target="_blank"><li><u>T</u>witter</li></a>
+	<a href="http://soundcloud.com/h01000110" target="_blank"><li><u>S</u>oundcloud</li></a>
+</ul>
+		<div class="tag_list">
+			<ul id="tag-list">
+				<li><a href="/"><img src="/assets/img/disk.png" />(C:)</a>
+			<ul>
+				
+				
+				
+				
+				
+				
+				<li><a href="/tag/cert/" title="cert"><img src="/assets/img/folder.ico" />cert</a>
+				<ul>
+					
+					
+					
+					
+					
+					
+					
+					
+					<li><a href="/tag/ai-103/" title="AI-103"><img src="/assets/img/folder.ico" />AI-103</a></li>
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+				</ul>
+				</li>
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				<li><a href="/tag/tag2/" title="tag2"><img src="/assets/img/folder.ico" />tag2</a>
+				<ul>
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+				</ul>
+				</li>
+				
+				
+				
+				
+				
+				
+				
+				<li><a href="/tag/tag3/" title="tag3"><img src="/assets/img/folder.ico" />tag3</a>
+				<ul>
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+				</ul>
+				</li>
+				
+				
+				
+				
+				
+				
+				
+				<li><a href="/tag/tag4/" title="tag4"><img src="/assets/img/folder.ico" />tag4</a>
+				<ul>
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+				</ul>
+				</li>
+				
+				
+			</ul>
+				</li>
+			</ul>
+		</div>
+		<div class="post_list">
+			
+			
+				
+<ul>
+	
+	<li><a href="/ai-103/01-planning-and-managing-azure-ai-solutions.html" title="01. Planning and managing Azure AI solutions"><img src="/assets/img/file.ico" title="01. Planning and managing Azure AI solutions" />01. Planning and managing Azure AI solutions</a></li>
+	
+	<li><a href="/ai-103/02-implementing-ai-generated-and-agentic-solutions.html" title="02. Implementing AI-generated and agentic solutions"><img src="/assets/img/file.ico" title="02. Implementing AI-generated and agentic solutions" />02. Implementing AI-generated and agentic solutions</a></li>
+	
+</ul>
+
+			
+		</div>
+		<div class="post_total">
+			
+				<div class="left">2 object(s)</div>
+			
+			<div class="right">&nbsp;</div>
+		</div>
+	</div>
+	
+        <div class="content">
+			<div class="post_title">
+				<img src="/assets/img/file.png" />
+				<h1>01. Planning and managing Azure AI solutions</h1>
+				<a href="/"><div class="btn"><span class="fa fa-times"></span></div></a>
+				<div class="btn btn_max"><span class="fa fa-window-maximize"></span></div>
+				<div class="btn"><span class="fa fa-window-minimize"></span></div>
+			</div>
+			<ul class="topbar">
+				<li>May 17, 2026</li>
+			</ul>
+			<div class="post_content">
+        		<h1 id="microsoft-ai-103ai-102-study-note">Microsoft AI-103(AI-102) study note</h1>
+
+<h3 id="ai란">AI란?</h3>
+
+<p>AI(인공지능)라는 용어는 애플리케이션이 인간과 유사한 동작을 나타낼 수 있도록 하는 광범위한 소프트웨어 기능을 다룬다. 오늘날 AI는 많은 데이터를 학습하면서 데이터 안의 의미 있는 연결 관계를 파악하고, 그 내용을 담고 있는 기계학습 모델을 기반으로 작동한다.</p>
+
+<h4 id="생성-ai-및-에이전트">생성 AI 및 에이전트</h4>
+
+<p>생성 AI는 자연어 프롬프트를 입력받아 새로운 응답을 생성할 수 있는 <strong>LLM(대규모 언어 모델)</strong>을 기반으로 한다. 이러한 생성 AI는 대화형 챗봇이나 AI 기반 콘텐츠 제작에 활용되며, 최근에는 AI 에이전트 솔루션의 핵심 기반 기술로 확장되고 있다. AI 에이전트는 LLM에 특정 역할과 책임을 정의한 지침을 결합하고, 필요한 지식을 검색하거나 작업을 자동화할 수 있는 도구를 사용하여 보다 자율적으로 과업을 수행한다.</p>
+
+<h4 id="자연어-처리">자연어 처리</h4>
+
+<p>최신 LLM은 기존의 <strong>NLP 기술(자연어 처리)</strong>에서 발전한 것이다. NLP는 통계적 방법과 의미 기반 모델을 이용해 문서, 이메일, SNS 글 같은 텍스트를 이해하고 분석하는 AI 분야이다. 지금은 많은 NLP 작업을 생성 AI 기반 LLM이 수행할 수 있지만, 용어 빈도 알고리즘과 같은 통계적 NLP 기법이나 텍스트 분류, 감정 분석, 요약을 위한 텍스트 분석 분야에서는 여전히 전통적인 NLP 기술이나 작업별 특화 모델이 활용된다.</p>
+
+<h4 id="컴퓨터-음성">컴퓨터 음성</h4>
+
+<p>AI 앱이나 AI 에이전트는 음성을 인식하고 다시 음성으로 응답하는 기술을 통해 사람과 더 자연스럽게 대화할 수 있다. 컴퓨터 음성 기술은 AI의 오래된 분야 중 하나이며, 최근에는 잡음, 말 끊김, 여러 언어와 억양까지 처리할 수 있을 정도로 발전했다. 또한 음성 대화뿐 아니라 녹음 파일 전사, 음성 분석, 실시간 번역, 텍스트 읽어주기에도 활용된다.</p>
+
+<h4 id="컴퓨터-비전">컴퓨터 비전</h4>
+
+<p>컴퓨터 비전은 이미지, 비디오, 실시간 카메라 스트림과 같은 시각적 데이터를 입력받아 해석하고 처리하는 AI 기술이다. 이를 통해 객체 인식, 상품 식별, 얼굴 인식, 불량 검출, 자율주행 판단 등 다양한 작업을 수행할 수 있다. 예를 들어 자동 체크아웃 시스템은 컴퓨터 비전을 이용해 장바구니 속 상품과 수량을 인식하여 바코드 스캔 없이 결제를 가능하게 한다. 최근 생성 AI 모델은 <strong>멀티모달</strong> 형태로 발전하여 시각적 입력을 처리할 뿐 아니라 이미지나 비디오와 같은 시각적 출력도 생성할 수 있다.</p>
+
+<h4 id="정보-추출">정보 추출</h4>
+
+<p>생성 AI, 자연어 처리, 컴퓨터 비전, 음성 인식 기술을 결합하면 문서, 양식, 이미지, 녹음 파일 등 다양한 형태의 콘텐츠에서 핵심 정보를 추출하는 AI 솔루션을 개발할 수 있다. 생성 AI는 언어적 추론을 수행하고, 자연어 기술은 문서의 의미와 구조를 이해하며, 컴퓨터 비전은 이미지나 영상 속 정보를 분석하고, 음성 기술은 음성 데이터를 전사하고 해석한다. 이러한 기술의 결합을 통해 <strong>비정형 데이터에서 필요한 정보를 자동으로 추출</strong>하고 업무를 자동화할 수 있다. 예를 들어 자동 비용 청구 처리 시스템은 스캔한 영수증에서 구매 날짜, 품목별 세부 정보, 총 비용을 자동으로 추출할 수 있다.</p>
+
+<h3 id="microsoft-foundry">Microsoft Foundry</h3>
+<p>Microsoft Foundry는 Microsoft Azure에서 AI 솔루션을 개발하기 위한 플랫폼이다. Azure AI 리소스를 개별적으로 프로비전하여 Foundry 없이도 AI 애플리케이션을 개발할 수 있지만, Microsoft Foundry는 <strong>프로젝트 조직, 리소스 관리, AI 개발 기능을 통합적으로 제공</strong>하므로 단순한 솔루션을 제외한 대부분의 AI 솔루션 개발에 권장된다. <br />
+또한 Microsoft Foundry는 웹 기반 시각적 개발 환경인 Foundry 포털과, 프로그래밍 방식으로 AI 솔루션을 개발할 수 있는 Foundry SDK를 제공한다.</p>
+
+<h4 id="microsoft-foundry-프로젝트">Microsoft Foundry 프로젝트</h4>
+<p>Microsoft Foundry에서는 AI 솔루션을 프로젝트 단위로 관리한다.</p>
+<ul>
+  <li>리소스 연결: AI 모델, 데이터베이스, 스토리지 같은 외부 리소스와의 연결</li>
+  <li>데이터: 모델이 사용할 문서, 파일, 데이터셋</li>
+  <li>코드: AI 앱이나 기능을 구현하는 코드</li>
+  <li>기타 요소: 프롬프트, 평가 설정, 배포 설정 등</li>
+</ul>
+
+<p>각 프로젝트는 Azure에 생성된 하나의 Microsoft Foundry 리소스에 소속되며, 이 Foundry 리소스는 컴퓨팅, 데이터 스토리지, AI 도구 및 기타 서비스를 제공한다. 하나의 Foundry 리소스는 여러 개의 자식 프로젝트를 포함할 수 있고, 이 중 하나는 기본 프로젝트로 지정될 수 있다.</p>
+
+<p>Microsoft Foundry의 프로젝트는 AI 솔루션을 만들 때 필요한 모델, 에이전트, 도구, 지식을 관리하는 작업 공간이다. 개발자는 프로젝트 안에서 LLM을 배포하고, 에이전트를 만들고, 도구와 지식 저장소를 연결해서 생성 AI 앱이나 AI 에이전트를 개발할 수 있다.</p>
+
+<h4 id="모델">모델</h4>
+<p>AI 솔루션의 핵심 기능을 수행하는 대규모 언어 모델, 즉 <strong>LLM</strong>이다. Microsoft Foundry에서는 Foundry <strong>모델 카탈로그</strong>에서 Microsoft OpenAI 및 기타 공급자의 모델을 선택하여 프로젝트에 <strong>배포</strong>할 수 있다. 배포된 모델은 프로젝트 엔드포인트 또는 Azure OpenAI 엔드포인트를 통해 애플리케이션과 연결되어 자연어 이해, 응답 생성, 추론 등의 작업을 수행한다.</p>
+
+<ul>
+  <li>프로젝트 엔드포인트 : Foundry 관련 API나 SDK를 통해 모델에 연결하는 방식</li>
+  <li>Azure OpenAI 엔드포인트 : OpenAI API나 SDK를 통해 Azure OpenAI 모델에 연결하는 방식</li>
+</ul>
+
+<h4 id="에이전트">에이전트</h4>
+<p><strong>LLM, 지침, 도구를 결합하여 작업을 자동화</strong>하고 사용자 또는 다른 에이전트와 협업할 수 있는 <strong>자율 AI 엔터티</strong>이다. Foundry의 에이전트는 Microsoft Foundry 에이전트 서비스를 통해 개발되며, 프로젝트 엔드포인트를 통해 사용된다.</p>
+
+<ul>
+  <li>LLM : 문장을 이해하고 판단하는 두뇌</li>
+  <li>지침 : 어떤 역할을 해야 하는지 알려주는 규칙</li>
+  <li>도구 : 검색, 코드 실행, 파일 처리 같은 실제 작업 수단</li>
+</ul>
+
+<h4 id="도구">도구</h4>
+<p>에이전트가 외부 기능이나 서비스를 활용하여 작업을 수행할 수 있도록 지원하는 요소이다. Microsoft Foundry의 도구에는 <strong>웹 검색, 코드 인터프리터</strong>와 같은 기본 제공 기능이 포함되며, <strong>MCP(모델 컨텍스트 프로토콜)</strong> 연결을 통해 사용자 지정 도구나 타사 도구와도 연동할 수 있다. 또한 텍스트 분석, 음성 인식 및 합성, 번역, 콘텐츠 이해와 같은 AI 서비스도 Foundry 도구에 포함된다.</p>
+
+<h4 id="지식">지식</h4>
+<p>에이전트가 답변이나 작업 수행 시 참고할 수 있는 <strong>데이터 원본</strong>을 의미한다. 에이전트는 도구를 사용하여 <strong>지식 저장소</strong>에 연결하고, 해당 데이터를 활용해 사용자의 프롬프트에 필요한 문맥을 제공한다. Microsoft Foundry에서는 <strong>Foundry IQ</strong>를 통해 여러 지식 원본을 하나의 <strong>중앙 MCP 기반 지식 연결</strong>로 통합하여 관리할 수 있다.</p>
+
+<h4 id="프로젝트">프로젝트</h4>
+<p>Microsoft Foundry에서 AI 솔루션 개발에 필요한 <strong>모델, 에이전트, 도구, 지식, 데이터, 코드 등을 관리하는 작업 단위</strong>이다. 개발자는 프로젝트를 통해 AI 솔루션의 자산을 체계적으로 구성하고, 프로젝트와 연결된 Foundry 리소스를 기반으로 생성 AI 채팅 앱이나 AI 에이전트를 개발할 수 있다. 프로젝트는 최소한의 리소스 관리 부담으로 AI 개발에 필요한 기능과 자산 관리를 제공한다.</p>
+
+<h4 id="foundry-리소스">Foundry 리소스</h4>
+<p>Azure에서 프로젝트가 사용하는 컴퓨팅, 데이터 스토리지, AI 도구 및 기타 클라우드 서비스를 제공하는 <strong>상위 리소스</strong>이다. 하나의 Foundry 리소스는 여러 개의 자식 프로젝트를 포함할 수 있으며, 그중 하나는 기본 프로젝트로 지정될 수 있다. <strong>Foundry 리소스는 프로젝트별 자산과 클라우드 서비스를 분리하면서도 중앙에서 관리할 수 있게 한다.</strong></p>
+
+<h4 id="microsoft-foundry-포털">Microsoft Foundry 포털</h4>
+<p>Microsoft Foundry 포털을 사용하여 Microsoft Foundry 리소스에 기반한 프로젝트를 개발하고 관리할 수 있습니다.</p>
+
+<h4 id="foundry-프로젝트의-주요-기능">Foundry 프로젝트의 주요 기능</h4>
+<ul>
+  <li>모델 배포/테스트</li>
+  <li>에이전트 생성/테스트</li>
+  <li>MCP 연결</li>
+  <li>리소스·권한 관리</li>
+  <li>엔드포인트·키 확인</li>
+  <li>SDK 자동화</li>
+</ul>
+
+<h3 id="foundry-도구">Foundry 도구</h3>
+<p>Microsoft Foundry 도구란, 애플리케이션에 바로 통합할 수 있는 기본 제공 API와 모델 집합이다.</p>
+
+<p>최신 AI 프로젝트에서는 생성 AI 모델과 에이전트가 중요하게 다뤄지지만, 어떤 작업은 이미 만들어져 있는 기본 AI 기능을 사용하는 것이 더 효율적일 수 있다. Microsoft Foundry는 이러한 기본 제공 API와 모델을 Foundry 도구로 제공하며, 이를 활용하면 생성 AI 에이전트만 사용하는 것보다 비용이 낮고 결과가 더 예측 가능한 AI 솔루션을 만들 수 있다.</p>
+
+<h4 id="azure-언어">Azure 언어</h4>
+<p>Azure 언어는 <strong>자연어 텍스트를 분석</strong>하는 Foundry 도구이다. 텍스트에서 <strong>엔터티를 추출</strong>하고, 감정 분석, 요약, 질의응답과 같은 자연어 처리 작업을 수행할 수 있다. 또한 대화형 언어 모델이나 질문 답변 솔루션을 구축하는 데 활용된다.</p>
+
+<h4 id="azure-speech">Azure Speech</h4>
+<p>Azure Speech는 <strong>음성인식과 음성합성을 지원</strong>하는 Foundry 도구이다. 텍스트를 음성으로 변환하거나, 음성을 텍스트로 변환할 수 있으며, 대화형 앱과 AI 에이전트에 실시간 음성 기능을 제공한다.</p>
+
+<h4 id="azure-translator">Azure Translator</h4>
+<p>Azure Translator는 여러 언어 간 <strong>텍스트 번역을 제공</strong>하는 Foundry 도구이다. 최신 언어 모델을 사용하여 다양한 언어의 텍스트를 자동으로 번역할 수 있으며, 다국어 서비스나 글로벌 애플리케이션에 활용된다.</p>
+
+<h4 id="azure-문서-인텔리전스">Azure 문서 인텔리전스</h4>
+<p>Azure 문서 인텔리전스는 청구서, 영수증, 양식과 같은 복잡한 문서에서 필요한 <strong>필드를 추출</strong>하는 Foundry 도구이다. 미리 빌드된 모델이나 사용자 지정 모델을 사용하여 문서 안의 날짜, 금액, 항목, 이름 등의 정보를 자동으로 추출할 수 있다.</p>
+
+<h4 id="azure-content-understanding">Azure Content Understanding</h4>
+<p>Azure Content Understanding은 양식, 문서, 이미지, 비디오, 오디오 스트림에서 <strong>데이터를 추출하고 분석하는 다중 모달 콘텐츠 분석 도구</strong>이다. 다양한 형태의 콘텐츠를 이해하고 필요한 정보를 구조화하여 추출하는 AI 솔루션을 구축하는 데 활용된다.</p>
+
+<p>Foundry 도구를 사용하려면 Microsoft Foundry 리소스의 도구별 엔드포인트에 연결하고 프로젝트 인증 키를 지정하거나 토큰 기반 인증을 사용하는 클라이언트 애플리케이션을 만듭니다. 그런 다음 도구별 API 및 SDK를 사용하여 제공된 기능을 사용할 수 있습니다.</p>
+
+				
+					<br>
+<hr>
+<br>
+<div class="donate">
+	<p>Did you like of something here? How about helping me buy some game?<br>
+	I'll appreciate it!</p>
+	<p>Bitcoin Wallet <i class="fa fa-btc"></i> 1Agt7r7aCAeWk5DyXXNyJXAXC4xxysiWjJ<br>Ethereum Wallet <i class="fa fa-money"></i> 0x19BD447c94499BdcA154Dc1BeF9FCf1f4c427C16</p>
+</div>
+				
+			</div>
+		</div>
+    
+	<script src="/assets/js/001.js"></script>
+	<script src="/assets/js/002.js"></script>
+	<div class="footer">
+		<p>Created by <a href="http://github.com/h01000110" target="_blank">h01000110 (hi)</a> | Code licensed under <a href="https://github.com/h01000110/h01000110.github.io/blob/master/LICENSE" target="_blank">MIT License</a></p>
+	</div>
+</body>
+</html>
